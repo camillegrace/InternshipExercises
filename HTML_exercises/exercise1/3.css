@@ -1,0 +1,87 @@
+.gray{
+	background-color: #C0C0C0;
+	min-height: 150px;
+	width: 960px;
+	padding-bottom: 1px;
+}
+
+.green{
+	background-color: #32CD32;
+	width: 160px;
+	min-height: 200px;	
+	float:left;
+	padding-bottom: 1px;
+	position: relative;
+}
+
+.purple{
+	background-color: #4B0082;
+	width:600px;
+	min-height:200px;
+	float:left;
+}
+
+.blue{
+	background-color: #0040ff;
+	width: 200px;
+	min-height: 200px;
+	float:left;
+	position: relative;	
+}
+
+.red{
+	background-color: #ff0000;
+	min-height: 100px;
+	width:960px;
+	padding-bottom: 1px;
+}
+
+.middle{
+	width: 960px;
+	overflow:hidden;
+	display: flex;
+	clear:both;
+}
+
+.small_square, .small_square1, .small_square2{
+	width: 10px;
+	height: 10px;
+	background-color: #deeaee;
+}
+
+.big_square{
+	width: 30px;
+	height: 30px;
+	background-color: #deeaee;
+	float:right;
+}
+
+.small_square{
+	float: left;
+}
+
+.small_square1{
+	position: absolute;
+	bottom:0;
+}
+
+.small_square2{
+	bottom:0;
+	right:0;
+	position: absolute;
+}
+
+.fixed{
+	position: fixed;
+	width: 50px;
+	height: 30px;
+	background-color: #FFFF00;
+	top: 175px;
+	left: 950px;
+}
+
+
+.blue, .purple{
+	padding-bottom: 1000000px;
+	margin-bottom: -1000000px;
+}
