@@ -1,0 +1,39 @@
+body{
+	background-color: #27313B;
+	background: url(../images/background.jpg) no-repeat center center fixed; 
+	font-family: Verdana, Geneva, sans-serif;
+
+}
+
+.rightcontainer{
+	padding: 15px;
+	font-family: Verdana, Geneva, sans-serif;
+	margin: 0 auto;
+	background-color: #27313B;
+	width: 30%;
+	min-height: 200px;
+	border: 1px solid #27313B;
+	border-radius: 5px;
+	float: right;
+	margin-right: 150px;
+}
+
+
+h1{
+	width: 641px;
+	height: 214px;
+	background-image: url(../images/name.png);
+	text-indent: -99999px;
+	background-repeat: no-repeat;
+	padding: 0 1%;
+	margin:0 auto;
+	margin-bottom: 70px;
+}
+
+input{
+    width: 100%;
+    padding: 10px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 4px;
+}

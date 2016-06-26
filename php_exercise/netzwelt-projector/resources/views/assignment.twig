@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Assignment</title>
+		<link rel="stylesheet" type="text/css" href="{{ base_url() }}/scripts/viewprojects.css">
+		<style type="text/css">
+		<script src="{{base_url()}}/public/scripts/jquery-3.0.0.js"></script>
+		<script src="{{base_url()}}/public/scripts/main.js"></script>
+		</style>
+
+	</head>
+
+
+	<body>
+			{% include 'templates/navigation.twig' %}
+			<section>
+		<div class="container">
+			<div class="table-title">
+			<br><br>
+			</div>
+
+			<div class="form">
+				<p> Select new member</p>
+				<select name="memberselect" id="name">
+					{%for x in nonmembers%}
+					<option value="{{x.person_id}}">{{x.firstname}} {{x.lastname}}</option>
+					{%endfor%}
+				</select>
+				<button class ="margined" id="addmember">Add member</button>
+			</form>	
+				<div class="member">
+					<h2>Current members</h2>
+					<ul id="memheader">
+					</ul>
+				</div>
+			</div>
+		</div>
+		</section>
+	</body>
+</html>

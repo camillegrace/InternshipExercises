@@ -1,0 +1,24 @@
+	{% extends 'templates/base.twig' %}
+
+{% block content %}
+
+	<section>
+			<h2 class="project">Create Project</h2>
+			<form method="POST">
+				Code<span style="color:#FF0000">*</span><br>
+				<input type="text" name="code" placeholder="Code" required ="required"><br>
+
+		  		Name<span style="color:#FF0000">*</span><br>
+		  		<input type="text" name="name" placeholder="Name" required ="required"><br>
+
+		  		Budget<span style="color:#FF0000">*</span><br>
+		  		<input type="number" name="budget" placeholder="Budget" required ="required"><br>
+
+		  		Remarks<br>
+		  		<input type="text" name="remarks" placeholder="Remarks"><br><br>
+
+		  		<button name="createproject" type="submit" value="submit">SAVE</button>
+			</form>
+	</section>	
+
+{% endblock %}

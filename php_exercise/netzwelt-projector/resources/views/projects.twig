@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Home</title>
+		<link rel="stylesheet" type="text/css" href="{{ base_url() }}/scripts/viewprojects.css">
+		<style type="text/css">
+		</style>
+
+	</head>
+
+
+	<body>
+			{% include 'templates/navigation.twig' %}
+		<div class="container">
+			<section>
+
+				{% if projects is defined %}
+				<div class="table-title">
+				<h4></h4>
+				</div>
+				<table class="table-fill">
+					<tr>
+						<th> Name</td>
+						<th> Budget</th>
+						<th> Assignments</th>
+
+				    {% for i in projects %}
+				    <tr>
+				        <td> {{i.name}}</td>
+				        <td> {{i.budget}}</td>
+				        <td> <a href = "/projects/assign?projects_id={{i.project_id}}">Assignments</a></td>
+				    </tr>
+				    {% endfor %}
+				</table>
+
+				{%else%}
+				<p>The projects table is empty!</p>
+				{%endif %}
+
+			</section>
+		</div>
+	</body>
+</html>

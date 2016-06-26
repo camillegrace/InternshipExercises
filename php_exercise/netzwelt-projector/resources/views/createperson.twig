@@ -1,0 +1,26 @@
+{% extends 'templates/base.twig' %}
+
+{% block content %}
+
+	<section>
+		<h2 class="person">Create Project</h2>
+
+		<form method="post" autocomplete="off">
+			Last Name <span style="color:#FF0000">*</span><br>
+			<input type="text" name="lastname" placeholder="Dela Cruz" required ="required"><br>
+
+	  		First Name <span style="color:#FF0000">*</span><br>
+	  		<input type="text" name="firstname" placeholder="Juan"  required ="required"><br>
+
+	  		Username <span style="color:#FF0000">*</span><br>
+	  		<input type="email" name="username" placeholder="you@domain.com" required ="required"><br>
+
+	  		Password <span style="color:#FF0000">*</span><br>
+	  		<input type="password" name="password" placeholder="password" required ="required"><br>
+
+	  		<button name="create" type="submit" value="submit">SAVE</button>
+		</form>
+	</section>
+
+
+{% endblock %}
