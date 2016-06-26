@@ -161,7 +161,7 @@ class ProjectController extends basecontroller{
         }
 
 
-		$idnow = $_GET["projects_id"];
+		$idnow = $_GET["project_id"];
 
 		$query = $conn->prepare("SELECT * from users where $idnow=users.project_id");
 		$query->execute();
@@ -176,7 +176,7 @@ class ProjectController extends basecontroller{
 		$results1[] = $row1;
 		}
 
-		$this->view->render($response, 'assignment.twig', array('nonmembers'=>$results1));
+		$this->view->render($response, 'assignment.twig', array('list'=>$results1));
 	}
 
 
@@ -200,7 +200,7 @@ class ProjectController extends basecontroller{
         }
 
 
-		$idnow = $_GET["projects_id"];
+		$idnow = $_GET["project_id"];
 
 		$query = $conn->prepare("SELECT * from users where $idnow=users.project_id");
 		$query->execute();
@@ -212,12 +212,12 @@ class ProjectController extends basecontroller{
 		$results1 = [];
 
 		foreach($result as $row){
-		$results[] = $row;				//Current members
+		$results[] = $row;
 		}
 
 	
 		foreach($result1 as $row1){
-		$results1[] = $row1;			//Nonmembers
+		$results1[] = $row1;
 		}
 
 		echo json_encode($results);
@@ -230,7 +230,6 @@ class ProjectController extends basecontroller{
 		    $username = 'root';
 		    $password = "";
 		    $dbname = 'netzwelt';
-		    $empty= "";
 
 		    try {
 	        $conn = new \PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -245,7 +244,7 @@ class ProjectController extends basecontroller{
 
 		    $mem_id = $_POST['name'];
 		    $proj_id = $_POST['project_id'];
-		    $conn->exec("UPDATE users set project_id= $proj_id where user_id=$mem_id");
+		    $conn->exec("UPDATE users set project_id=$proj_id where user_id=$mem_id");
 
 		    $query = $conn->prepare("SELECT users.user_id, users.lastname, users.firstname from users where users.user_id = $mem_id");
 		    $query->execute();
@@ -258,28 +257,28 @@ class ProjectController extends basecontroller{
 
 
 		}
-/*
-		public function remove_member($request, $response){
-			$settings = $this->settings; //$settings[servername] 
-			$servername = $settings['servername'];
-			$username = $settings['username'];
-			$password = $settings['password'];
-			$dbname = $settings['dbname'];
 
-			try {
-		    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-		    // set the PDO error mode to exception
-		    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		    }
-			catch(PDOException $e)
-		    {
-		    echo "Connection failed: " . $e->getMessage();
-		    }
+		public function remove_member($request, $response)
+		{
+			$servername = 'localhost';
+		    $username = 'root';
+		    $password = "";
+		    $dbname = 'netzwelt';
+
+		    try {
+	        $conn = new \PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+	        // set the PDO error mode to exception
+	        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	        }
+	   		catch(PDOException $e)
+	        {
+	        echo $e->getMessage();
+	        }
 
 		    $mem_id = $_POST['name'];
-			$conn->exec("UPDATE persons set project_id= 0 where person_id=$mem_id");
+			$conn->exec("UPDATE users set project_id= 0 where user_id=$mem_id");
 			
-			$query = $conn->prepare("SELECT persons.person_id, persons.Lastname, persons.Firstname from persons where persons.person_id = $mem_id");
+			$query = $conn->prepare("SELECT users.user_id, users.lastname, users.firstname from users where users.user_id = $mem_id");
 		    $query->execute();
 		    $result = $query;
 
@@ -289,6 +288,4 @@ class ProjectController extends basecontroller{
 			echo json_encode($results);
 
 		}
-		*/
-	
 }

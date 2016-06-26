@@ -13,21 +13,20 @@
 
 
 	<body>
-			{% include 'templates/navigation.twig' %}
-			<section>
-		<div class="container">
+		{% include 'templates/navigation.twig' %}
+		<section>
 			<div class="table-title">
 			<br><br>
 			</div>
 
 			<div class="form">
-				<p> Select new member</p>
+				<h2> Select new member</h2>
 				<select name="memberselect" id="name">
-					{%for x in nonmembers%}
-					<option value="{{x.person_id}}">{{x.firstname}} {{x.lastname}}</option>
+					{%for x in list%}
+					<option value="{{x.user_id}}">{{x.firstname}} {{x.lastname}}</option>
 					{%endfor%}
 				</select>
-				<button class ="margined" id="addmember">Add member</button>
+				<button class ="margined" id="add">Add member</button>
 			</form>	
 				<div class="member">
 					<h2>Current members</h2>
@@ -35,7 +34,6 @@
 					</ul>
 				</div>
 			</div>
-		</div>
 		</section>
 	</body>
 </html>
