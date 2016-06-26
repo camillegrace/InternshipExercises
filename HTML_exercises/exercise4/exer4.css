@@ -1,0 +1,209 @@
+html, body{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	border-top: 5px solid #DFDFDF;
+	width: 100%;
+}
+
+.browserwide, .browserwide1{
+	width:15%;
+	border-top: 5px solid #F3F3F3
+}
+
+.browserwide{
+	float:left;
+}
+
+.browserwide1{
+	float:right;
+}
+
+.wholepage{
+	margin: 0 auto;
+	width:70%;
+	min-height: 500px;
+	border-top:5px solid #444444;
+}
+
+.headercontainer{
+	width: 100%;
+	height: 100px;
+	border-bottom: 1px solid #E8E8E8;
+}
+
+.left-header{
+	float:left;
+	height:70px;
+	width:40%;
+}
+
+.right-header{
+	float:right;
+	margin-top: 20px;
+	width: 55%;
+}
+
+h1.h1image{
+	background-image: url("name.png");
+	text-indent: -99999px;
+	background-repeat: no-repeat;
+	width:269px;
+	height: 34px;
+}
+
+.h1welcome{
+	color:#444444;
+	text-align: center;
+	font-size: 2.3em;
+}
+
+.welcome{
+	width: 100%;
+	height: 70px;
+	border-bottom-style: double;
+	border-color: #E8E8E8;
+	border-bottom-width: 5px;
+}
+
+h1{
+	font-weight: normal;
+	font-family: "Times New Roman", Times, serif;
+}
+
+h2{
+	font-style: italic;
+	color: #444444;
+	font-size: 1.5em;
+	font-weight:normal;
+	font-family:"Times New Roman", Times, serif;
+}
+
+h2.recent, h2.current, h2.digital{
+	text-indent: -99999px;
+	background-repeat: no-repeat;
+}
+
+h2.recent{
+	background-image: url("recent.png");
+	width:238px;
+	height:22px;
+}
+
+h2.current{
+	background-image: url("current.png");
+	width:238px;
+	height:24px;
+}
+
+h2.digital{
+	background-image: url("digital.png");
+	width:238px;
+	height: 24px;
+}
+
+.middlecontainer{
+	margin-top: 20px;
+}
+
+.middle-left{
+	width: 30%;
+	min-height:200px;
+	float: left;
+}
+
+.recent-entries, .current-favorite{
+	min-height: 100px; 
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.digital-life{
+	min-height: 225px; 
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+#image img{
+	max-width: 100%;
+}
+
+.middle-right{
+	width: 69%;
+	height: 500px;
+	float: left;
+}
+
+.footer{
+	clear: both;
+	width: 100%;
+	height: 100px;
+	border-top: 1px solid #E8E8E8;
+	font-family: "Lucida Console", Monaco, monospace;
+}
+
+.pfooter{
+	float:left;
+	font-size: 0.6em;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.afooter{
+	float:right;
+	font-size: 0.9em;
+}
+
+.hyperlink, .hyperlink:hover, .hyperlink2{
+    text-decoration: none;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:0.7em; 
+	font-weight: bold;
+    padding: 3px 10px 3px 10px;
+    text-align: center;
+   	margin-left: 15px; 
+   	border-radius: 15px;
+}
+
+.hyperlink{
+	background-color: transparent;
+	color: #6E7E84;
+	float:right;
+
+}
+
+.hyperlink:hover{
+	background-color: #79B6DF;
+	color: #FFF;
+	float:right;
+}
+
+.hyperlink2{
+	background-color: #F2F2F2;
+	color: #9B9DA0;
+	width:100%;
+}
+
+
+.afooter li{
+	display: inline;
+}
+
+ul{
+	list-style-type: none;
+	padding:0;
+	line-height: 170%;
+}
+
+ul, p{
+	font-size:0.7em;
+	font-family: Tahoma, Geneva, sans-serif;
+	color: #9E9E9E;
+}
+
+a{
+	color: #95A6BB;
+	font-size:0.7em;
+	font-family: Tahoma, Geneva, sans-serif;
+}
